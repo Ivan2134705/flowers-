@@ -37,9 +37,9 @@ game_over_keyboard.add_line()
 game_over_keyboard.add_button('Продолжить(просто введи число)')
 
 drugaya_klava  = VkKeyboard(one_time = True) 
-game_over_keyboard.add_button('Выйти')
-game_over_keyboard.add_line()
-game_over_keyboard.add_button('купить шавуху афтору')
+drugaya_klava.add_button('Выйти')
+drugaya_klava.add_line()
+drugaya_klava.add_button('купить шавуху афтору')
 
 
 
