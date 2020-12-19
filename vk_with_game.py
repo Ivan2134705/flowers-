@@ -36,6 +36,13 @@ game_over_keyboard.add_button('Выйти')
 game_over_keyboard.add_line()
 game_over_keyboard.add_button('Продолжить(просто введи число)')
 
+drugaya_klava  = VkKeyboard(one_time = True) 
+game_over_keyboard.add_button('Выйти')
+game_over_keyboard.add_line()
+game_over_keyboard.add_button('купить шавуху афтору')
+
+
+
 gamers={}
 # Работа с сообщениями
 longpoll = VkLongPoll(vk)
@@ -73,12 +80,15 @@ for event in longpoll.listen():
                 elif text == 'Об авторе'.lower():   
                     send_message(user_id,"Damir",back_keyboard)
                 elif text == 'Сделать пожертвование'.lower():   
-                    send_message(user_id,"Платежка еще не подключена",back_keyboard)
+                    send_message(user_id,"выбери",drugaya_klava)
                 elif text == 'Сыграть в игру'.lower():
                     from random import randint
                     gamers[user_id] = randint(1,9000)
                     send_message(user_id,"угадывай")
                 elif text == 'узнать погоду'.lower():   
                     send_message(user_id,"ясно",back_keyboard)
+                    #купить шавуху афтору
+                elif text == 'купить шавуху афтору'.lower():   
+                    send_message(user_id,"купи",main_keyboard)
                 else:
                     send_message(user_id,"Продолжайте",main_keyboard)
