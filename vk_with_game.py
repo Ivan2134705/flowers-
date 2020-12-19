@@ -40,7 +40,10 @@ drugaya_klava  = VkKeyboard(one_time = True)
 drugaya_klava.add_button('Выйти')
 drugaya_klava.add_line()
 drugaya_klava.add_button('купить шавуху афтору')
-
+drugaya_klava  = VkKeyboard(one_time = True) 
+drugaya_klava.add_button('Выйти')
+drugaya_klava.add_line()
+drugaya_klava.add_button('Помолиться')
 
 
 gamers={}
